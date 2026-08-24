@@ -2,7 +2,7 @@
 
 A personal automotive electronics project for capturing CAN frames through an Uno-compatible board, recording them with Python, isolating selected arbitration IDs, and displaying observed vehicle states.
 
-![Bench hardware setup](images/hardware_setup.jpg)
+![Bench hardware setup](hardware_setup.jpg)
 
 ## Project overview
 

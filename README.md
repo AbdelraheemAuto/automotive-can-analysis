@@ -3,6 +3,28 @@
 A personal automotive electronics project for capturing CAN frames through an Uno-compatible board, recording them with Python, isolating selected arbitration IDs, and displaying observed vehicle states.
 
 ![Bench hardware setup](hardware_setup.jpg)
+## Hardware connections
+
+The following table documents the reconstructed connections between the Arduino Uno-compatible board and MCP2515 CAN module used for the project.
+
+| Arduino Uno pin | MCP2515 module pin | Function |
+| --- | --- | --- |
+| 5V | VCC | Module power |
+| GND | GND | Common ground |
+| D10 | CS | SPI chip select |
+| D11 | SI | SPI MOSI |
+| D12 | SO | SPI MISO |
+| D13 | SCK | SPI clock |
+| D2 | INT | CAN controller interrupt |
+
+### Vehicle CAN connection
+
+| MCP2515 terminal | OBD-II pin | Function |
+| --- | --- | --- |
+| CAN-H | Pin 6 | CAN High |
+| CAN-L | Pin 14 | CAN Low |
+
+> **Note:** This pinout is a reconstruction based on the surviving hardware setup and standard Arduino Uno SPI assignments. The original acquisition sketch is unavailable, so the chip-select and interrupt assignments cannot be independently confirmed from firmware.
 
 ## Project overview
 
